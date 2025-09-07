@@ -32,5 +32,5 @@ export function renderListWithTemplate(
   const htmlStrings = list.map(templateFn);
 
   if (clear) parentElement.innerHTML = "";
-  parentElement.insertAdjacentHTML("afterbegin", htmlStrings.join(""));
+  parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
 }
