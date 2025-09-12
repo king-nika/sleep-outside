@@ -22,15 +22,10 @@ export function setClick(selector, callback) {
   qs(selector).addEventListener("click", callback);
 }
 
-export function renderListWithTemplate(
-  templateFn,
-  parentElement,
-  list,
-  position = "afterbegin",
-  clear = false,
-) {
-  const htmlStrings = list.map(templateFn);
+export function getParam(param) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const product = urlParams.get(param);
 
-  if (clear) parentElement.innerHTML = "";
-  parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
+  return product;
 }
