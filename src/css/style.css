@@ -177,6 +177,23 @@ button {
   max-width: 250px;
 }
 
+.product-grid {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.product-grid a {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  border: 1.5px solid var(--light-grey);
+  border-radius: 8px;
+}
+
 .product-card h2,
 .product-card h3,
 .product-card p {
