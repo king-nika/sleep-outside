@@ -1,10 +1,11 @@
 import { setLocalStorage } from "./utils.mjs";
 
 export default class ProductDetails {
-  constructor(productId, dataSource) {
+  constructor(productId, dataSource, category) {
     this.productId = productId;
     this.product = {};
     this.dataSource = dataSource;
+    this.category = category;
   }
 
   async init() {
@@ -13,7 +14,10 @@ export default class ProductDetails {
     // once the HTML is rendered, add a listener to the Add to Cart button
     // Notice the .bind(this). This callback will not work if the bind(this) is missing. Review the readings from this week on 'this' to understand why.
 
-    const product = await this.dataSource.findProductById(this.productId);
+    const product = await this.dataSource.findProductById(
+      this.productId,
+      this.category,
+    );
     this.product = product;
 
     this.renderProductDetails();
@@ -45,7 +49,7 @@ export default class ProductDetails {
 
         <img
           class="divider"
-          src="${product.Image}"
+          src="${product.Images.PrimaryMedium}"
           alt="${product.NameWithoutBrand}"
         />
 

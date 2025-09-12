@@ -6,6 +6,12 @@ function renderCartContents() {
   if (cartItems) {
     const htmlItems = cartItems.map((item) => cartItemTemplate(item));
     document.querySelector(".product-list").innerHTML = htmlItems.join("");
+
+    const totalContainer = document.querySelector(".cart-footer");
+    const total = cartItems.reduce((acc, item) => acc + item.FinalPrice, 0);
+
+    totalContainer.classList.remove("hide");
+    totalContainer.querySelector("p").textContent = `Total: $${total}`;
   } else {
     document.querySelector(".product-list").innerHTML =
       "<p>No Items in Cart</p>";

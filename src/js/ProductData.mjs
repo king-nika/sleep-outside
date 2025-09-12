@@ -16,8 +16,8 @@ export default class ProductData {
 
     return data.Result;
   }
-  async findProductById(id) {
-    const products = await this.getData();
+  async findProductById(id, category) {
+    const products = await this.getData(category);
     return products.find((item) => item.Id === id);
   }
 }
