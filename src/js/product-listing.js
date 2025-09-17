@@ -11,3 +11,8 @@ const myList = new ProductList(
 );
 
 myList.init();
+
+
+import { loadHeaderFooter } from "./utils.mjs";
+loadHeaderFooter();
+
