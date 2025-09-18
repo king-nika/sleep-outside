@@ -1,4 +1,4 @@
-// wrapper for querySelector...returns matching element
+// wrapper for querySelector..returns matching element
 export function qs(selector, parent = document) {
   return parent.querySelector(selector);
 }
