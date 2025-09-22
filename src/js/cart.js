@@ -38,3 +38,6 @@ function cartItemTemplate(item) {
 }
 
 renderCartContents();
+
+import { loadHeaderFooter } from "../utils.mjs";
+loadHeaderFooter();
