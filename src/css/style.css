@@ -281,9 +281,13 @@ button {
 }
 
 /* Checkout form styles */
+.cart-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1em;
+}
 form {
-  max-width: 500px;
-  margin: 1em auto;
   padding: 1em;
   border: 1px solid var(--light-grey);
   border-radius: 8px;
@@ -320,7 +324,25 @@ form input[type="submit"] {
   border: 0;
   cursor: pointer;
 }
-
+.checkout-summary {
+  border: 1px solid var(--light-grey);
+  box-shadow: 0px 0px 8px var(--light-grey);
+  border-radius: 8px;
+  padding: 1em;
+}
+.checkout-summary h3 {
+  margin: 0.5em 0;
+  color: var(--tertiary-color);
+}
+.checkout-summary p {
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 0;
+}
+.checkout-summary span {
+  font-weight: 700;
+  color: var(--tertiary-color);
+}
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
