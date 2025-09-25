@@ -261,15 +261,88 @@ button {
 .cart-footer {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
   max-width: 700px;
   margin: auto;
   font-weight: 700;
+}
+
+.cart-footer a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--secondary-color);
+  padding: 0.5em 1em;
+  border-radius: 4px;
 }
 
 .hide {
   display: none;
 }
 
+/* Checkout form styles */
+.cart-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1em;
+}
+form {
+  padding: 1em;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px var(--light-grey);
+}
+form h3 {
+  margin: 0.5em 0;
+  color: var(--tertiary-color);
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0 0.2em 0;
+
+  span {
+    font-size: var(--large-font);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.2em;
+  }
+}
+form input {
+  padding: 0.5em;
+  font-size: var(--small-font);
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+}
+form input[type="submit"] {
+  display: block;
+  margin: 1em auto 0;
+  font-size: var(--large-font);
+  background-color: var(--secondary-color);
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+.checkout-summary {
+  border: 1px solid var(--light-grey);
+  box-shadow: 0px 0px 8px var(--light-grey);
+  border-radius: 8px;
+  padding: 1em;
+}
+.checkout-summary h3 {
+  margin: 0.5em 0;
+  color: var(--tertiary-color);
+}
+.checkout-summary p {
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 0;
+}
+.checkout-summary span {
+  font-weight: 700;
+  color: var(--tertiary-color);
+}
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
