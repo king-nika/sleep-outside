@@ -44,11 +44,9 @@ export function renderListWithTemplate(
 }
 
 export function renderWithTemplate(template, parentElement, data, callback) {
-  parentElement.innerHTML = template;
-
-  if (callback) {
-    callback(data);
-  }
+  if (!parentElement) return;
+  parentElement.innerHTML = template(data);
+  if (callback) callback();
 }
 
 export async function loadTemplate(path) {
