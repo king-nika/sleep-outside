@@ -258,6 +258,17 @@ button {
   grid-column: 3;
 }
 
+.cart-card__remove {
+  grid-row: 1/3;
+  grid-column: 4;
+  justify-self: end;
+  background: var(--light-grey);
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: var(--tertiary-color);
+}
+
 .cart-footer {
   display: flex;
   justify-content: flex-end;
