@@ -31,15 +31,6 @@ export default class ExternalServices {
       },
       body: JSON.stringify(payload),
     };
-    // return await fetch(`${baseUrl}checkout/`, options).then(convertToJson);
-
-    const fakeRes = new Response(
-      JSON.stringify({ message: "Something went wrong" }),
-      {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    return await convertToJson(fakeRes);
+    return await fetch(`${baseUrl}checkout/`, options).then(convertToJson);
   }
 }
